@@ -1,8 +1,4 @@
 import { createRouter, createWebHistory } from 'vue-router';
-
-// قم بإزالة الاستيراد التلقائي إذا كنت تعرف المسارات يدويًا
-// import { routes } from 'vue-router/auto-routes' 
-
 import MainComponent from '../components/MainComponent.vue';
 import CreateProduct from '../components/CreateProduct.vue'; 
 import EditProduct from '../components/EditProduct.vue';
@@ -32,7 +28,7 @@ const router = createRouter({
   routes,
 });
 
-// Workaround for https://github.com/vitejs/vite/issues/11804
+
 router.onError((err, to) => {
   if (err?.message?.includes?.('Failed to fetch dynamically imported module')) {
     if (!localStorage.getItem('vuetify:dynamic-reload')) {

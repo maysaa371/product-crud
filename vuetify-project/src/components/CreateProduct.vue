@@ -6,8 +6,9 @@
       </div>
       <div class="card-body">
         <form @submit.prevent="handleCreateProduct">
+       
           <div class="row">
-            <div class="col-md-6">
+       
               <div class="mb-3">
                 <label for="name" class="form-label">Product Name</label>
                 <input
@@ -17,9 +18,10 @@
                   v-model="currentProduct.name"
                 />
                 <div v-if="errors.name" class="text-danger">{{ errors.name[0] }}</div>
-              </div>
+             
             </div>
-            <div class="col-md-6">
+          
+          
               <div class="mb-3">
                 <label for="description" class="form-label">Description</label>
                 <input
@@ -31,9 +33,8 @@
                 <div v-if="errors.description" class="text-danger">{{ errors.description[0] }}</div>
               </div>
             </div>
-          </div>
-          <div class="row">
-            <div class="col-md-6">
+         
+        
               <div class="mb-3">
                 <label for="price" class="form-label">Price</label>
                 <input
@@ -43,9 +44,8 @@
                   v-model.number="currentProduct.price"
                 />
                 <div v-if="errors.price" class="text-danger">{{ errors.price[0] }}</div>
-              </div>
-            </div>
-            <div class="col-md-6">
+           
+        
               <div class="mb-3">
                 <label for="quantity" class="form-label">Quantity</label>
                 <input
@@ -57,8 +57,8 @@
                 <div v-if="errors.quantity" class="text-danger">{{ errors.quantity[0] }}</div>
               </div>
             </div>
-          </div>
-          <div class="d-flex justify-content-between">
+         
+          <div class="d-flex ">
             <button
               type="submit"
               class="btn btn-primary"
@@ -105,7 +105,7 @@ export default {
     cancelEdit() {
       this.$router.push('/');
     },
-    async fetchProduct(id) {
+    async fetchProduct() {
       // Fetch the product details for editing
       // Implement this method to set the currentProduct data
     }
@@ -136,30 +136,5 @@ export default {
   }
 };
 </script>
+<style src="./styles.css"></style>
 
-<style scoped>
-.container {
-  max-width: 800px;
-}
-
-.card {
-  margin-bottom: 20px;
-}
-
-.table th,
-.table td {
-  vertical-align: middle;
-}
-
-.mb-4 {
-  margin-bottom: 1.5rem;
-}
-
-.btn {
-  margin-right: 0.5rem;
-}
-
-.text-danger {
-  color: #dc3545;
-}
-</style>

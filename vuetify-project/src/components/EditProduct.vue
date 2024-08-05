@@ -1,7 +1,12 @@
 <template>
     <div class="container my-5">
+      <div class="card mb-4">
+        <div class="card-header">
       <h2>Edit Product</h2>
+        </div>
+      <div class="card-body">
       <form @submit.prevent="submitUpdatedProduct">
+        
         <div class="mb-3">
           <label for="name" class="form-label">Name</label>
           <input
@@ -44,10 +49,15 @@
             required
           />
         </div>
-        <button type="submit" class="btn btn-primary">Update</button>
-        <router-link to="/" class="btn btn-secondary ms-2">Cancel</router-link>
+        <div class="d-flex">
+          <button type="submit" class="btn btn-primary">Update</button>
+          <router-link to="/" class="btn btn-secondary ms-2">Cancel</router-link>
+        </div>
+     
       </form>
     </div>
+  </div>
+  </div>
   </template>
   
   <script>
@@ -96,18 +106,6 @@
   };
   </script>
   
-  <style scoped>
-  .container {
-    max-width: 800px;
-    margin-top: 20px;
-  }
-  
-  .mb-3 {
-    margin-bottom: 1rem;
-  }
-  
-  .btn {
-    margin-right: 0.5rem;
-  }
-  </style>
+
+  <style src="./styles.css"></style>
   

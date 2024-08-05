@@ -54,13 +54,4 @@ export default {
 };
 </script>
 
-<style scoped>
-.table {
-  width: 100%;
-  margin-bottom: 1rem;
-  color: #212529;
-}
-.card {
-  margin-top: 20px;
-}
-</style>
+<style src="./styles.css"></style>

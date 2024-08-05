@@ -67,7 +67,7 @@ export default createStore({
         throw error.response.data; 
       }
     },
-    async deleteProduct({ dispatch }, productId) { // Correctly define the deleteProduct action
+    async deleteProduct({ dispatch }, productId) { 
       try {
         await axios.delete(`http://127.0.0.1:8000/api/products/${productId}`);
         dispatch('fetchProducts');

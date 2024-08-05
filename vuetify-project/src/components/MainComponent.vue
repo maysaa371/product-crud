@@ -1,4 +1,7 @@
 <template>
+   
+    <!-- Include Header Component -->
+     <!-- <HeaderComponent />-->
   <div class="container my-5">
     <h2 class="text-center mb-4">Product Management</h2>
 
@@ -137,65 +140,5 @@ export default {
   },
 };
 </script>
+<style src="./styles.css"></style>
 
-<style scoped>
-.container {
-  max-width: 800px;
-}
-
-.card {
-  margin-bottom: 20px;
-}
-
-.table th,
-.table td {
-  vertical-align: middle;
-}
-
-.mb-4 {
-  margin-bottom: 1.5rem;
-}
-
-.btn {
-  margin-right: 0.5rem;
-}
-
-.pagination-controls {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-@media (max-width: 767px) {
-  .container {
-    max-width: 100%;
-    padding: 10px;
-  }
-
-  .btn {
-    width: 100%;
-    margin-bottom: 10px;
-  }
-.btn-custom {
-  width:80%;
-  font-size:10px;
-}
-  .pagination-controls {
-    flex-direction: column;
-  }
-
-  .pagination .page-item {
-    margin-bottom: 5px;
-  }
-}
-
-@media (max-width: 576px) {
-  .card-header h5 {
-    font-size: 1rem;
-  }
-
-  .table th,
-  .table td {
-    font-size: 0.875rem;
-  }
-}
-</style>
